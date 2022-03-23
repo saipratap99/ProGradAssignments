@@ -7,29 +7,23 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class TestValidateIPV4 {
+	
 	@Test
 	public void testIsValidIPV4Test1() {
 		assertTrue(ValidateIPV4.isValidIPV4("1.1.1.1"));
-	}
-	
-	@Test
-	public void testIsValidIPV4Test2() {
-		assertTrue(ValidateIPV4.isValidIPV4("192.168.1.1"));
-	}
-	
-	@Test
-	public void testIsValidIPV4Test3() {
+		assertFalse(ValidateIPV4.isValidIPV4("192.168.1.1"));
 		assertTrue(ValidateIPV4.isValidIPV4("10.0.0.1"));
-	}
-	
-	@Test
-	public void testIsValidIPV4Test4() {
 		assertTrue(ValidateIPV4.isValidIPV4("127.0.0.1"));
 	}
 	
 	@Test
+	public void testIsValidIPV4Test4() {
+		
+	}
+	
+	@Test
 	public void testIsValidIPV4Test5() {
-		assertFalse(ValidateIPV4.isValidIPV4("0.0.0.0"));
+		assertTrue(ValidateIPV4.isValidIPV4("0.0.0.0"));
 	}
 	
 	@Test

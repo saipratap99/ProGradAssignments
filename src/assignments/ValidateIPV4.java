@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ValidateIPV4 {
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -13,8 +14,6 @@ public class ValidateIPV4 {
 	
 	public static boolean isValidIPV4(String ip) {
 		String[] bytes = ip.split("[.]{1}");
-
-		//		System.out.println(Arrays.toString(bytes));
 		
 		if(bytes.length != 4)
 			return false;
