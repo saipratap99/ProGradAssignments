@@ -1,5 +1,7 @@
 package unitsystem;
 
+import unitsystem.exceptions.InvalidUnitException;
+
 public abstract class Unit {
 	
 	double value;

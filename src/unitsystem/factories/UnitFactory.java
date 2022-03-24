@@ -1,5 +1,6 @@
-package unitsystem;
+package unitsystem.factories;
 
+import unitsystem.Unit;
 import unitsystem.length.Length;
 import unitsystem.temperature.Temperature;
 import unitsystem.weight.Weight;

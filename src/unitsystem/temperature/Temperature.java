@@ -1,7 +1,7 @@
 package unitsystem.temperature;
 
-import unitsystem.InvalidUnitException;
 import unitsystem.Unit;
+import unitsystem.exceptions.InvalidUnitException;
 
 public class Temperature extends Unit {
 	public Temperature(double value, String unitType) {

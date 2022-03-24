@@ -1,7 +1,7 @@
 package unitsystem.weight;
 
-import unitsystem.InvalidUnitException;
 import unitsystem.Unit;
+import unitsystem.exceptions.InvalidUnitException;
 
 public class Weight extends Unit{
 	public Weight(double value, String unitType) {
