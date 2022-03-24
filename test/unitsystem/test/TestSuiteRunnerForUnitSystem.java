@@ -13,5 +13,6 @@ public class TestSuiteRunnerForUnitSystem {
 		else 
 			for(Failure failure : result.getFailures())
 				System.out.println(failure);
+		System.out.println("Passed: " + (result.getRunCount() - result.getFailureCount()) + " / " + result.getRunCount());
 	}
 }

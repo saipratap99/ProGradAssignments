@@ -3,9 +3,11 @@ package unitsystem;
 public abstract class Unit {
 	
 	double value;
+	String unitType;
 	
-	public Unit(double value) {
+	public Unit(double value, String unitType) {
 		this.value = value;
+		this.unitType = unitType;
 	}
 
 	public double getValue() {
@@ -17,12 +19,21 @@ public abstract class Unit {
 	}
 	
 	
+	public String getUnitType() {
+		return unitType;
+	}
+
+	public void setUnitType(String unitType) {
+		this.unitType = unitType;
+	}
+
 	public abstract double convert(Unit anotherUnit) throws InvalidUnitException;
+	
 	public abstract Unit add(Unit anotherUnit) throws InvalidUnitException;
 	public abstract Unit subtract(Unit anotherUnit) throws InvalidUnitException;
 	
 	public boolean equals(Unit anotherUnit) throws InvalidUnitException {
-		return convert(anotherUnit) == this.getValue();
+		return convert(anotherUnit) == convert(this);
 	}
 }
 

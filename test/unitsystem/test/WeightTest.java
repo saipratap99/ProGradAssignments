@@ -19,8 +19,8 @@ public class WeightTest {
 	
 	@Test
 	public void testOneDeciKilloGramIsEqualsToOneHundredGrams() throws InvalidUnitException {
-		Unit oneDeciKilloGram = unitFactory.getUnitInstance(0.1, "kg");
-		Unit oneHundredGrams = unitFactory.getUnitInstance(100, "g");
+		Unit oneDeciKilloGram = unitFactory.getUnitInstance(0.1, "kg"); // 0.1 kg
+		Unit oneHundredGrams = unitFactory.getUnitInstance(100, "g"); // 100 g
 		
 		assertTrue(oneDeciKilloGram.equals(oneHundredGrams));
 	}

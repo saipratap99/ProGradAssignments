@@ -1,35 +1,30 @@
 package unitsystem;
 
-import unitsystem.length.CentiMeter;
-import unitsystem.length.KilloMeter;
-import unitsystem.length.Meter;
-import unitsystem.temperature.Celcius;
-import unitsystem.temperature.Fahrenheit;
-import unitsystem.temperature.Kelvin;
-import unitsystem.weight.Gram;
-import unitsystem.weight.KilloGram;
+import unitsystem.length.Length;
+import unitsystem.temperature.Temperature;
+import unitsystem.weight.Weight;
 
 public class UnitFactory {
 	public Unit getUnitInstance(double value, String measurementType) {
 		// length 
 		if(measurementType.equalsIgnoreCase("cm"))
-		 	return new CentiMeter(value);
+		 	return new Length(value, "cm");
 		 else if(measurementType.equalsIgnoreCase("m"))
-			 return new Meter(value);
+			 return new Length(value, "m");
 		 else if(measurementType.equalsIgnoreCase("km"))
-			 return new KilloMeter(value);
+			 return new Length(value, "km");
 		 // weight
 		 else if(measurementType.equalsIgnoreCase("g"))
-			 return new Gram(value);
+			 return new Weight(value, "g");
 		 else if(measurementType.equalsIgnoreCase("kg"))
-			 return new KilloGram(value);
+			 return new Weight(value, "kg");
 		// temperature
 		 else if(measurementType.equalsIgnoreCase("C"))
-			 return new Celcius(value);
+			 return new Temperature(value, "C");
 		 else if(measurementType.equalsIgnoreCase("F"))
-			 return new Fahrenheit(value);
+			 return new Temperature(value, "F");
 		 else if(measurementType.equalsIgnoreCase("K"))
-			 return new Kelvin(value);
+			 return new Temperature(value, "K");
 		 else
 			 return null;
 	}

@@ -72,7 +72,7 @@ public class LengthTest {
 	}
 	
 	@Test(expected = InvalidUnitException.class)
-	public void testInvalidUnitExceptionForWeight() throws InvalidUnitException {
+	public void testInvalidUnitExceptionForLength() throws InvalidUnitException {
 		Unit milliKilloMeter = unitFactory.getUnitInstance(0.001, "km");
 		Unit oneHundredGrams = unitFactory.getUnitInstance(100, "g");
 		
